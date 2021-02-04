@@ -1,8 +1,9 @@
 import React from 'react';
+import { secondsToDuration, minutesToDuration } from '../utils/duration';
 
 function ProgressBar(props) {
   const { durationMinutes, durationSeconds, durationProgress, onBreak,
-    activeSession, initialBreakTimer, initialFocusTimer, minutesToDuration, secondsToDuration } = props;
+    activeSession, initialBreakTimer, initialFocusTimer } = props;
 
   const handleDisplay = activeSession ? { display: 'block' } : { display: 'none' };
   const handleSessionDuration = !onBreak ? minutesToDuration(initialFocusTimer) : minutesToDuration(initialBreakTimer);

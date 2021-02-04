@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import classNames from "../utils/class-names";
 import useInterval from "../utils/useInterval";
-import { minutesToDuration, secondsToDuration } from "../utils/duration";
 import FocusTimer from "./FocusTimer";
 import BreakTimer from "./BreakTimer";
 import PlayPause from "./PlayPause";
@@ -100,8 +99,8 @@ function Pomodoro() {
       </div>
       <PlayPause playPause={playPause} classNames={classNames} isTimerRunning={isTimerRunning} stopBtn={stopBtn} />
       <ProgressBar durationMinutes={durationMinutes} durationSeconds={durationSeconds} durationProgress={durationProgress} 
-      onBreak={onBreak} activeSession={activeSession} minutesToDuration={minutesToDuration} initialBreakTimer={initialBreakTimer} 
-      initialFocusTimer={initialFocusTimer} secondsToDuration={secondsToDuration} />
+      onBreak={onBreak} activeSession={activeSession} initialBreakTimer={initialBreakTimer} 
+      initialFocusTimer={initialFocusTimer} />
     </div>
   );
 }
