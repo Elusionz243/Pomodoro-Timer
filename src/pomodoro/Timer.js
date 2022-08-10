@@ -3,7 +3,7 @@ import { minutesToDuration } from "../utils/duration";
 
 const Timer = ({ timerName, timer, decreaseTimer, increaseTimer }) => {
   return (
-    <div className="col">
+    <div className="col" style={{ minWidth: "fit-content" }}>
       <div className={timerName === "Break" ? "float-right" : ""}>
         <div
           className="input-group input-group-lg mb-2"
